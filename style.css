@@ -1,0 +1,19 @@
+
+h5{
+    font-size:small;
+}
+
+body {
+    background-color: rgba(255, 255, 255, 0.808);
+}
+
+.tabs {
+    background-color: #202020;
+}
+
+.tab-content {
+    margin-top: 10px;
+}
+.row{
+    display: inline;
+}

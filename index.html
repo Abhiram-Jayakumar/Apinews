@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>News-App</title>
+</head>
+
+<body>
+    <h4 class="#78909c white lighten-1 center-align">
+        <b>METROPOLITAN</b>
+    </h4>
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs">
+                <li class="tab col s4"><a class="active white-text accent-3" href="#test1">Top Headlines</a></li>
+                <li class="tab col s4"><a class="white-text accent-3" href="#test2">Search</a></li>
+                <li class="tab col s4"><a class="white-text accent-3" href="#test3">news by category</a></li>
+            </ul>
+        </div>
+        <div id="test1" class="col s12 all-news">All news</div>
+        <div id="test3" class="col s12">
+            <br>
+
+            <form id="category-form">
+                <div class="row z-depth-2 col s12">
+                    <div class="input-field col s10">
+                        <select id="category">
+                            <option value="general" selected>general</option>
+                            <option value="business">business</option>
+                            <option value="entertainment">entertainment</option>
+                            <option value="health">health</option>
+                            <option value="science">science</option>
+                            <option value="technology">technology</option>
+                        </select>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="btn right-align tab-content" id="category-input" value="Search">
+                    </div>
+                </div>
+            </form>
+            <div class="news-by-category"></div>
+        </div>
+        <br><br><br>
+        <div id="test2" class="col s12">
+            <form>
+                <div class="row col s12 z-depth-2">
+                    <input type="search" id="query" class="col s10 tab-content">
+                    <input type="submit" value="Search" id='search' class="btn tab-content">
+                </div>
+            </form>
+            <div class="search"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="App.js"></script>
+    <script>
+        M.Tabs.init(document.querySelector('.tabs'))
+        M.FormSelect.init(document.querySelectorAll('select'))
+    </script>
+</body>
+
+</html>
